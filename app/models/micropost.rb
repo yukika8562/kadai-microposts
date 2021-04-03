@@ -4,5 +4,5 @@ class Micropost < ApplicationRecord
   validates :content, presence: true, length: { maximum: 255 }
   
   has_many :favorites
-  has_many :inlikes, through: :favorites, source: :user
+  has_many :favorite_micropost, through: :favorites, source: :user
 end
